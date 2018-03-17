@@ -45,7 +45,7 @@ view: palmerston_bores {
     }
 
     dimension: Customer{
-      label: "Crowson"
+      label: "Customer"
       sql: REPLACE(${cid}'12','Palmerston');;
     }
 
