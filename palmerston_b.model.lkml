@@ -1,14 +1,12 @@
 connection: "ctsdev"
 
 # include all the views
+# include all the views
 include: "*.view"
 
 # include all the dashboards
 include: "*.dashboard"
 
-datagroup: palmerston_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+explore: palmerston_bores {
+  label: "Palm Bores"
 }
-
-persist_with: palmerston_default_datagroup
