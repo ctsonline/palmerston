@@ -10,3 +10,7 @@ include: "*.dashboard"
 explore: palmerston_bores {
   label: "Palm Bores"
 }
+
+explore: durack_lakes {
+  label: "Durack Lakes"
+}

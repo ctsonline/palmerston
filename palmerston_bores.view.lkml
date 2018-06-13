@@ -28,28 +28,16 @@ view: palmerston_bores {
     dimension: sid {
       label: "Site ID"
       type: number
-      value_format_name: id
       sql: ${TABLE}.sid ;;
     }
 
     dimension: cid {
       label: "Customer ID"
       type: number
-      value_format_name: id
       sql: ${TABLE}.cid ;;
     }
 
-    dimension: Site{
-      label: "Crowson Bore level"
-      sql: REPLACE(${sid}'12','Crowsons Bore');;
-    }
-
-    dimension: Customer{
-      label: "Customer"
-      sql: REPLACE(${cid}'12','Palmerston');;
-    }
-
-    dimension: d1 {
+      dimension: d1 {
       group_label: "Digital"
       type: number
       sql: ${TABLE}.d1 ;;
