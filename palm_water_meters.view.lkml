@@ -52,6 +52,13 @@ view: palm_water_meters {
       sql: cast(TIMESTAMPTZ(${TABLE}.t1) as timestamp);;
     }
 
+  dimension: time_8am_8am {
+    label: "time 8am - 8am"
+    type:string
+    sql:(trunc_days(${reading_time}) = add_days(-1,trunc_days(now())) AND extract_hours(${reading_time}) >= 8) OR (trunc_days(${reading_time}) = trunc_days(now()) AND extract_hours(${reading_time}) < 8);;
+  }
+
+
     dimension: v1 {
       label: "Value"
       type: number
