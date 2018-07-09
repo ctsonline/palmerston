@@ -14,3 +14,7 @@ explore: palmerston_bores {
 explore: durack_lakes {
   label: "Durack Lakes"
 }
+
+explore: palm_water_meters {
+  label: "PCC Water Meters"
+}
