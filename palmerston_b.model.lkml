@@ -18,3 +18,7 @@ explore: durack_lakes {
 explore: palm_water_meters {
   label: "PCC Water Meters"
 }
+
+explore: palm_ctsfieldmouse {
+  label: "PCC fieldmouse"
+}

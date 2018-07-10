@@ -64,7 +64,7 @@ view: palm_water_meters {
     description: "A date starts from 8am of that day and ends before 8am of the following day."
     type: time
     timeframes: [date, hour, week, month, year]
-    sql: DATEADD(hour,-8,${t1_raw}) ;;
+    sql: DATEADD(hour,-8,${reading_raw}) ;;
   }
 
 
