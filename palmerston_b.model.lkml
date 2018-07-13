@@ -5,7 +5,7 @@ connection: "ctsdev"
 include: "*.view"
 
 # include all the dashboards
-include: "*.dashboard"
+#include: "*.dashboard"
 
 explore: palmerston_bores {
   label: "Palm Bores"

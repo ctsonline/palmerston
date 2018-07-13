@@ -79,8 +79,18 @@ view: palm_water_meters {
       drill_fields: [name]
     }
 
-    measure: average_value {
-      type: average
+  measure: average_value {
+    type: average
+    sql: ${v1} ;;
+    value_format_name: decimal_2
+  }
+    measure: max_value {
+      type: max
+      sql: ${v1} ;;
+      value_format_name: decimal_2
+    }
+    measure: min_value {
+      type: min
       sql: ${v1} ;;
       value_format_name: decimal_2
     }
