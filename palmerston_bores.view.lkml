@@ -54,7 +54,7 @@ view: palmerston_bores {
   dimension_group: t1 {
     label: "Raw"
     type: time
-    hidden: yes
+    hidden: no
     timeframes: [raw, date, time, hour, month, day_of_week, week, hour_of_day, time_of_day]
     sql: cast(TIMESTAMPTZ(${TABLE}.t1) as timestamp) ;;
     drill_fields: [t1_date,t1_hour,t1_month]
@@ -78,9 +78,21 @@ view: palmerston_bores {
       drill_fields: [name]
     }
 
+     measure: min_value {
+    type: min
+    sql: ${v1} ;;
+    value_format_name: decimal_2
+    }
+
+      measure: max_value {
+        type:max
+        sql: ${v1} ;;
+        value_format_name: decimal_2
+        }
+
     measure: average_value {
       type: average
       sql: ${v1} ;;
       value_format_name: decimal_2
     }
-  }
+}
