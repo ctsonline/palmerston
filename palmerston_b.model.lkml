@@ -19,6 +19,7 @@ explore: palm_water_meters {
   label: "PCC Water Meters"
 }
 
-explore: palm_ctsfieldmouse {
-  label: "PCC fieldmouse"
+
+explore: fm_bores {
+  label: "FM Bores Palmerston"
 }
