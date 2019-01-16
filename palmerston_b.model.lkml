@@ -23,3 +23,7 @@ explore: palm_water_meters {
 explore: fm_bores {
   label: "FM Bores Palmerston"
 }
+
+explore: palm_ctsfieldmouse {
+  label: "Fieldmouse Devices"
+}
