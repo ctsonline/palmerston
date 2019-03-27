@@ -103,6 +103,11 @@ view: palm_ctsfieldmouse {
     sql:  ${a1} ;;
   }
 
+  measure: min_value_a1 {
+    type:  min
+    sql:  ${a1} ;;
+  }
+
   measure: average_value_a2 {
     type: average
     sql: ${a2} ;;
