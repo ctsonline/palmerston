@@ -108,13 +108,18 @@ view: palm_ctsfieldmouse {
     sql:  ${a1} ;;
   }
 
-  measure: average_value_a2 {
-    type: average
+  measure: min_value_a2 {
+    type: min
     sql: ${a2} ;;
   }
 
-  measure: average_value_a3 {
-    type: average
+  measure: max_value_a2 {
+    type: max
+    sql: ${a2} ;;
+  }
+
+  measure: min_value_a3 {
+    type: min
     sql: ${a3} ;;
   }
 
@@ -123,8 +128,13 @@ view: palm_ctsfieldmouse {
     sql: ${a3} ;;
   }
 
-  measure: average_value_a4 {
-    type: average
+  measure: min_value_a4 {
+    type: min
+    sql: ${a4} ;;
+  }
+
+  measure: max_value_a4 {
+    type: max
     sql: ${a4} ;;
   }
 
