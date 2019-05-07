@@ -75,6 +75,34 @@ view: palm_ctsfieldmouse {
     sql: ${TABLE}.sid ;;
   }
 
+  dimension: site_name_6 {
+    group_label: "pedestrian sites"
+    type: string
+    hidden: no
+    sql: REPLACE(${sid},'6','Gumnut Way to Livistonia Park') ;;
+  }
+
+  dimension: site_name_7 {
+    group_label: "pedestrian sites"
+    type: string
+    hidden: no
+    sql: REPLACE(${sid},'7','Gumnut Way to Livistonia Park') ;;
+  }
+
+  dimension: site_name_9 {
+    group_label: "pedestrian sites"
+    type: string
+    hidden: no
+    sql: REPLACE(${sid},'9','Politis Court to Strawbridge Crescent') ;;
+  }
+
+  dimension: site_name_10 {
+    group_label: "pedestrian sites"
+    type: string
+    hidden: no
+    sql: REPLACE(${sid},'10','Politis Court to Strawbridge Crescent') ;;
+  }
+
   dimension_group: timestamp {
     type: time
     timeframes: [raw, time, time_of_day, date, week, month, hour_of_day, hour, hour3, minute, minute10]
@@ -141,7 +169,7 @@ view: palm_ctsfieldmouse {
   measure: people_count {
     description: "People Count"
     type: yesno
-    sql: ${a1} > 1000 ;;
+    sql: ${a1} > 20 ;;
     }
 
 }
