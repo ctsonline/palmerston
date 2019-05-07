@@ -138,4 +138,10 @@ view: palm_ctsfieldmouse {
     sql: ${a4} ;;
   }
 
+  measure: people_count {
+    description: "People Count"
+    type: yesno
+    sql: ${a1} > 1000 ;;
+    }
+
 }
