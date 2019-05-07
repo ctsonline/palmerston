@@ -86,7 +86,7 @@ view: palm_ctsfieldmouse {
     group_label: "pedestrian sites"
     type: string
     hidden: no
-    sql: REPLACE(${sid},'7','Gumnut Way to Livistonia Park') ;;
+    sql: REPLACE(${sid},'7','Bonson Terrace to Staghorn Court ') ;;
   }
 
   dimension: site_name_9 {
@@ -100,7 +100,7 @@ view: palm_ctsfieldmouse {
     group_label: "pedestrian sites"
     type: string
     hidden: no
-    sql: REPLACE(${sid},'10','Politis Court to Strawbridge Crescent') ;;
+    sql: REPLACE(${sid},'10','Politis Court to Politis Court to Strawbridge Park') ;;
   }
 
   dimension_group: timestamp {
