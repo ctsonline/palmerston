@@ -89,12 +89,6 @@ view: palm_ctsfieldmouse {
     drill_fields: [timestamp_date,timestamp_hour,timestamp_week]
   }
 
-  dimension_group: t1 {
-    type: time
-    timeframes: [raw, hour_of_day, day_of_week, time_of_day, date]
-    sql: ${TABLE}.t1 ;;
-  }
-
 
 
 
