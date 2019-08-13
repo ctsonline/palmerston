@@ -75,41 +75,25 @@ view: palm_ctsfieldmouse {
     sql: ${TABLE}.sid ;;
   }
 
-  dimension: site_name_6 {
-    group_label: "pedestrian sites"
+  dimension: site_name {
+    label: "Site Name"
     type: string
     hidden: no
-    sql: REPLACE(${sid},'6','Gumnut Way to Livistonia Park') ;;
+    sql: REPLACE(${sid},'6','Gumnut Way to Livistonia Park','7','Bonson Terrace to Staghorn Court','9','Politis Court to Strawbridge Crescent''10','Politis Court to Politis Court to Strawbridge Park') ;;
   }
 
-  dimension: site_name_7 {
-    group_label: "pedestrian sites"
-    type: string
-    hidden: no
-    sql: REPLACE(${sid},'7','Bonson Terrace to Staghorn Court ') ;;
-  }
-
-  dimension: site_name_9 {
-    group_label: "pedestrian sites"
-    type: string
-    hidden: no
-    sql: REPLACE(${sid},'9','Politis Court to Strawbridge Crescent') ;;
-  }
-
-  dimension: site_name_10 {
-    group_label: "pedestrian sites"
-    type: string
-    hidden: no
-    sql: REPLACE(${sid},'10','Politis Court to Politis Court to Strawbridge Park') ;;
-  }
-
-  dimension_group: timestamp {
+   dimension_group: timestamp {
     type: time
     timeframes: [raw, time, time_of_day, date, week, month, hour_of_day, hour, hour3, minute, minute10]
     sql: TIMESTAMPTZ(${TABLE}.timestamp);;
     drill_fields: [timestamp_date,timestamp_hour,timestamp_week]
   }
 
+  dimension_group: t1 {
+    type: time
+    timeframes: [raw, hour_of_day, day_of_week, time_of_day, date]
+    sql: ${TABLE}.t1 ;;
+  }
 
 
 
@@ -169,7 +153,7 @@ view: palm_ctsfieldmouse {
   measure: people_count {
     description: "People Count"
     type: yesno
-    sql: ${a1} > 20 ;;
+    sql: ${a1} > 5 ;;
     }
 
 }
